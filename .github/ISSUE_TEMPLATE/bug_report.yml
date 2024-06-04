@@ -6,54 +6,59 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report! 
-        Please make sure to fill out the entire form below, providing as much context 
-        as you can in order to help us triage and track down your bug as quickly as possible.
 
-        Before filing a bug, please be sure you have searched through 
-        [existing bugs](https://github.com/open-telemetry/opentelemetry-python/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Abug) 
+        Please make sure to fill out the entire form below, providing as much context as 
+        you can in order to help us triage and track down your bug as quickly as possible.
+
+        Before filing a bug, please be sure you have searched through [existing bugs](https://github.com/open-telemetry/opentelemetry-python/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Abug) 
         to see if an existing issue covers your bug.
-  - type: input
+  - type: textarea
     id: environment
     attributes:
       label: Describe your environment
       description: |
-        Describe any aspect of your environment relevant to the problem, including your Python version, 
+        Please describe any aspect of your environment relevant to the problem, including your Python version, 
         [platform](https://docs.python.org/3/library/platform.html), version numbers of installed dependencies, 
         information about your cloud hosting provider, etc. If you're reporting a problem with a specific version 
         of a library in this repo, please check whether the problem has been fixed on main.
       value: |
-        ## Environment
-        e.g., 
-        Python 3.8.10
-        OS: Ubuntu 20.04
-        dependency versions
+        OS: (e.g., Ubuntu 20.04)
+        Python verison: (e.g., Python 3.8.10)
+        SDK Version: (e.g., )
+        API Version: (e.g., )
+        
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Please provide as much detail as you reasonably can. Describe exactly how to reproduce the error. Include a code sample if applicable.
+      value: |
+        ### Description
+
+        ### Steps to reproduce
+
+        ### Expected behavior
+
+        ### Actual behavior
 
   - type: textarea
-    id: steps-to-reproduce
     attributes:
-      label: Steps to reproduce
-      description: "Describe exactly how to reproduce the error. Include a code sample if applicable."
-      placeholder: "1. Step one\n2. Step two\n3. Step three\n\n```python\n# Code sample\n```"
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected-behavior
-    attributes:
-      label: What is the expected behavior?
-      description: "What did you expect to see?"
-      placeholder: "I expected that..."
-
-  - type: textarea
-    id: actual-behavior
-    attributes:
-      label: What is the actual behavior?
-      description: "What did you see instead?"
-      placeholder: "Instead, I saw..."
-
+      label: Log output
+      description: |
+        Please copy and paste any relevant log output.
+      render: shell
   - type: textarea
     id: additional-context
     attributes:
       label: Additional context
       description: "Add any other context about the problem here."
       placeholder: "Any additional information..."
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to implement a fix?
+      description: |
+        If you plan to implement a fix for this, check this box to let the maintainers and community know (you can update this later if you change your mind).
+        Refer to the [contribution guide]() for tips on getting started.
+      options:
+        - "No"
+        - "Yes"
