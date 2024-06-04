@@ -29,7 +29,8 @@ body:
         ## Expected behavior
 
         ## Actual behavior
-
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Log output
@@ -52,3 +53,5 @@ body:
       options:
         - "No"
         - "Yes"
+    validations:
+      required: false
